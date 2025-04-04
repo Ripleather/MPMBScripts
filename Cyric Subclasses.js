@@ -308,3 +308,132 @@ AddSubClass("rogue", "the masque", {
     }
   }
 });
+
+AddSubClass("paladin", "Oath of Tempering", {
+  regExpSearch : /Oath of Tempering/i,
+  subname : "Oath of Tempering",
+  fullname : "Oath of Tempering",
+  source : [["OTT", 1]],
+  features : {
+    "subclassfeature3" : {
+      name : "Tenets of Tempering",
+      source : [["OTT", 1]],
+      minlevel : 3,
+      description : desc([
+        "Endure With Purpose: Do not break when tested. Strength lies in holding the line.",
+        "Sacrifice Intelligently: Step forward when it counts. Spend only what you must.",
+        "Lead By Will: Inspire through resolve, not display. Others follow when you never falter."
+      ])
+    },
+    "subclassfeature3a" : {
+      name : "Crucible Smite",
+      source : [["OTT", 1]],
+      minlevel : 3,
+      description : desc([
+        "When you hit with a melee weapon attack, you may expend hit points instead of a spell slot to fuel your Divine Smite.",
+        "You must spend 5 HP per level of the smite (e.g., 10 HP for a 2nd-level smite).",
+        "You can only use this feature if you have no spell slots of the required level or higher.",
+        "You may not reduce yourself below 1 HP with this feature."
+      ])
+    },
+    "subclassfeature3b" : {
+      name : "Accelerated Mercy",
+      source : [["OTT", 1]],
+      minlevel : 3,
+      description : desc([
+        "You may use your Lay on Hands feature as a bonus action instead of an action.",
+        "This applies when healing yourself or another creature within 5 feet.",
+        "You may still use only one Lay on Hands action per turn."
+      ])
+    },
+    "subclassfeature3c" : {
+      name : "Channel Divinity: Unyielding Focus",
+      source : [["OTT", 1]],
+      minlevel : 3,
+      description : desc([
+        "As a bonus action, you steel your will and body against failure. For 1 minute, you gain the following benefits:",
+        "You cannot be moved or knocked prone unless you choose to be.",
+        "You have advantage on Constitution and Wisdom saving throws.",
+        "Once per turn when you take damage, you may reduce that damage by an amount equal to your Charisma modifier (minimum 1).",
+        "You may end this effect early (no action required) to immediately regain hit points equal to 5 × your proficiency bonus."
+      ]),
+      action : ["bonus action", "Unyielding Focus"],
+      usages : 1,
+      recovery : "long rest"
+    },
+    "subclassfeature7" : {
+      name : "Tempered Stand",
+      source : [["OTT", 1]],
+      minlevel : 7,
+      description : desc([
+        "Your resolve protects those who fight beside you. When an ally within 10 feet of you takes damage from an attack, you may use your reaction to grant them temporary hit points equal to your Charisma modifier (minimum 1) before the damage is applied.",
+        "You can use this reaction a number of times equal to your proficiency bonus per long rest.",
+        "At 18th level, this aura increases to 30 feet."
+      ]),
+      action : ["reaction", "Tempered Stand"],
+      usages : "Proficiency bonus per long rest",
+      recovery : "long rest"
+    },
+    "subclassfeature15" : {
+      name : "Tempered Core",
+      source : [["OTT", 1]],
+      minlevel : 15,
+      description : desc([
+        "You gain resistance to bludgeoning, piercing, and slashing damage from all weapon attacks while you are below half your maximum hit points.",
+        "In addition, whenever you are below half your hit point maximum, you add your Charisma modifier to all saving throws."
+      ])
+    },
+    "subclassfeature20" : {
+      name : "Incarnate of Endurance",
+      source : [["OTT", 1]],
+      minlevel : 20,
+      description : desc([
+        "As an action, you gain the following benefits for 1 minute:",
+        "You are immune to being charmed, frightened, paralyzed, or stunned.",
+        "When you use Lay on Hands, you may heal a creature for the full remaining value of your pool as a single action.",
+        "You may use Crucible Smite without restriction: you may expend HP to smite even if you still have spell slots, and the HP cost is halved (3 per smite level).",
+        "Once you use this feature, you can’t use it again until you finish a long rest."
+      ]),
+      action : ["action", "Incarnate of Endurance"],
+      usages : 1,
+      recovery : "long rest"
+    }
+  },
+  spellcastingBonus : [
+    {
+      name : "Oath of Tempering Spells",
+      spells : ["shield of faith", "shield"],
+      selection : ["shield of faith", "shield"],
+      times : 2,
+      description : "I gain bonus spells known, which do not count against the number of spells I can know."
+    },
+    {
+      name : "Oath of Tempering Spells",
+      spells : ["enhance ability", "warding bond"],
+      selection : ["enhance ability", "warding bond"],
+      times : 2,
+      description : "I gain bonus spells known, which do not count against the number of spells I can know."
+    },
+    {
+      name : "Oath of Tempering Spells",
+      spells : ["haste", "protection from energy"],
+      selection : ["haste", "protection from energy"],
+      times : 2,
+      description : "I gain bonus spells known, which do not count against the number of spells I can know."
+    },
+    {
+      name : "Oath of Tempering Spells",
+      spells : ["stoneskin", "death ward"],
+      selection : ["stoneskin", "death ward"],
+      times : 2,
+      description : "I gain bonus spells known, which do not count against the number of spells I can know."
+    },
+    {
+      name : "Oath of Tempering Spells",
+      spells : ["hold monster", "steel wind strike"],
+      selection : ["hold monster", "steel wind strike"],
+      times : 2,
+      description : "I gain bonus spells known, which do not count against the number of spells I can know."
+    }
+  ]
+});
