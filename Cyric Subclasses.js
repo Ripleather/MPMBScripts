@@ -241,3 +241,70 @@ AddSubClass("ranger", "shadowstrike conclave", {
     }
   }
 });
+
+// Rogue: The Masque
+AddSubClass("rogue", "the masque", {
+  regExpSearch: /masque/i,
+  subname: "The Masque",
+  fullname: "Rogue: The Masque",
+  source: [["CYRIC", 1]],
+  features: {
+    "subclassfeature1": {
+      name: "Word Wound",
+      source: [["CYRIC", 1]],
+      minlevel: 3,
+      description: desc([
+        "You weaponize derision, deception, and distraction. As a bonus action, choose one creature you can see within 30 feet.",
+        "The creature must succeed on a Charisma saving throw (DC = 8 + your proficiency bonus + your Charisma modifier), or be mentally exposed until the start of your next turn.",
+        "While exposed, the next time you hit the creature with an attack, you can apply Sneak Attack damage even if you don’t have advantage and no ally is nearby.",
+        "If the creature succeeds, you can’t target it again with this feature until you finish a short or long rest."
+      ]),
+      action: ["bonus action", "Word Wound"]
+    },
+    "subclassfeature2": {
+      name: "Grace and Guile",
+      source: [["CYRIC", 1]],
+      minlevel: 3,
+      description: desc([
+        "You may use Charisma instead of Intelligence for your subclass saving throw DCs or features.",
+        "You gain proficiency in either Persuasion or Deception (your choice).",
+        "You learn the Vicious Mockery cantrip. It counts as a rogue cantrip for you.",
+        "You may apply your Sneak Attack to Vicious Mockery if the target is currently mentally exposed."
+      ])
+    },
+    "subclassfeature3": {
+      name: "Emotional Disarmament",
+      source: [["CYRIC", 1]],
+      minlevel: 9,
+      description: desc([
+        "When you target a creature with Word Wound and they fail the saving throw, you may impose one of the following conditions until the end of your next turn:",
+        "1) The creature cannot take reactions.",
+        "2) The creature has disadvantage on the next Wisdom or Intelligence saving throw it makes.",
+        "3) The creature’s movement speed is reduced by 10 feet.",
+        "You may use this feature a number of times equal to your Charisma modifier (minimum of once) per long rest."
+      ])
+    },
+    "subclassfeature4": {
+      name: "Veiled Threat",
+      source: [["CYRIC", 1]],
+      minlevel: 13,
+      description: desc([
+        "You are always under the effect of nondetection.",
+        "When a creature targets you with a spell or attack and fails, you may use your reaction to cast Suggestion on them without expending a spell slot. They have disadvantage on the saving throw if they were mentally exposed this turn.",
+        "Once you use this feature, you must finish a short or long rest to use it again."
+      ]),
+      action: ["reaction", "Veiled Threat"]
+    },
+    "subclassfeature5": {
+      name: "The Final Mask",
+      source: [["CYRIC", 1]],
+      minlevel: 17,
+      description: desc([
+        "When you reduce a creature to 0 HP or succeed in a Deception or Persuasion check contested by them, you may mark them with your Final Mask.",
+        "Until the end of your next turn, any attack against that creature has advantage.",
+        "If a creature marked by your Final Mask dies, you regain one expended use of Word Wound.",
+        "You may use this feature a number of times equal to your Charisma modifier per long rest."
+      ])
+    }
+  }
+});
