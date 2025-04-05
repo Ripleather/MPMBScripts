@@ -262,6 +262,33 @@ AddSubClass("rogue", "the masque", {
       action: ["bonus action", "Word Wound"]
     },
     "subclassfeature2": {
+      name: "Mocking Spellcasting",
+      source: [["CYRIC", 1]],
+      minlevel: 3,
+      description: desc([
+        "You gain the Vicious Mockery cantrip as a rogue spell. It doesn't count against your number of cantrips known."
+      ]),
+      spellcastingBonus: {
+        name: "Mocking Spellcasting",
+        spells: ["vicious mockery"],
+        selection: ["vicious mockery"],
+        times: 1,
+        description: "I gain bonus spells known, which do not count against the number of spells I can know."
+      }
+
+      name: "Mocking Spellcasting",
+      source: [["CYRIC", 1]],
+      minlevel: 3,
+      description: desc([
+        "You gain the Vicious Mockery cantrip as a rogue spell. It doesn't count against your number of cantrips known."
+      ]),
+      spellcastingBonus: {
+        name: "Mocking Spellcasting",
+        spells: ["vicious mockery"],
+        selection: ["vicious mockery"],
+        times: 1,
+        description: "I gain bonus spells known, which do not count against the number of spells I can know."
+      }
       name: "Grace and Guile",
       source: [["CYRIC", 1]],
       minlevel: 3,
